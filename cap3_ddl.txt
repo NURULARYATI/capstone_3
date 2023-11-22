@@ -1,0 +1,25 @@
+CREATE TABLE table_m3 (
+    "Order Date" date,
+    "Row ID" int,
+    "Order ID" text,
+    "Ship Mode" text,
+    "Customer ID" text,
+    "Segment" text,
+    "Country" text,
+    "City" text,
+    "State" text,
+    "Postal Code" int,
+    "Region" text,
+    "Product ID" text,
+    "Category" text,
+    "Sub-Category" text,
+    "Product Name" text,
+    "Sales" numeric,
+    "Quantity" int,
+    "Discount" numeric,
+    "Profit" numeric
+);
+
+postgres=#SET datestyle = "ISO, DMY";
+
+postgres=# \COPY table_m3 FROM '/Users/Folder/Downloads/E-commerce_records_2020.csv' WITH (FORMAT CSV, DELIMITER ',', HEADER, ENCODING 'LATIN1');
